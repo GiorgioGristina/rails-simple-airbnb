@@ -2,17 +2,29 @@
 <div class="container">
   <h1>All our Flat</h1>
 
-  <% @flats.each do |flat| %>
-    <div class='card border'>
-      <h3><%= flat.name %></h3>
-      <p><%= flat.address  %></p>
-      
+  
+  <div class =''>
+    <% @flats.each do |flat| %>
+      <div class='card border'>
+        <h3><%= flat.name %></h3>
+        <p><%= flat.address  %></p>
+        <div class='d-flex'>
+          <div >
+           <i class="fa-solid fa-sterling-sign"></i>
+            
+            <span><%= flat.price_per_night %></span>
+          </div>
+          <div>
+             <i class="fa-solid fa-person"></i>
+            <span><%= flat.number_of_guest %></span>
+          </div>
+        </div>
 
 
+      </div>
+    <% end %>
+  </div>
 
-    </div>
-
-  <% end %>
 
 
 </div>
